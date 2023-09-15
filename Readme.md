@@ -3,20 +3,16 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3143)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# WinForms Scheduler - Obtain appointments by an object in the data source
+
+The [PersistentObject.GetSourceObject](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraScheduler.PersistentObject.GetSourceObject(DevExpress.XtraScheduler.ISchedulerStorageBase)) method allows you to obtain a source object that corresponds to a specific appointment. This example shows how to obtain an appoitnment by an object in the data source.
+
+The example handles the [SchedulerStorageBase.AppointmentCollectionLoaded](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraScheduler.SchedulerStorageBase.AppointmentCollectionLoaded) event to create a Hashtable/Dictionary where source objects are keys and appointments are values.
+
+For recurring patterns, you should iterate through exceptions using the [Appointment.GetExceptions]() method.
+
+
+## Files to Review
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
-* [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
-<!-- default file list end -->
-# How to obtain appointments based on the source data object
-
-
-<p><strong>Problem:</strong> There is a <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraSchedulerPersistentObject_GetSourceObjecttopic"><u>PersistentObject.GetSourceObject Method</u></a> that allows retrieving a source object, associated with a specified appointment. However, there is no "reverse" method that allows retrieving an appointment by the source object which might be useful in some scenarios.<br />
-<strong>Solution:</strong> The most efficient method to implement this functionality is to build a Hashtable/Dictionary with source objects as keys and appointments as values. This can be done in the <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraSchedulerSchedulerStorageBase_AppointmentCollectionLoadedtopic"><u>SchedulerStorageBase.AppointmentCollectionLoaded Event</u></a> handler. Note that for recurring patterns, you should iterate through their exceptions manually (use the <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraSchedulerAppointment_GetExceptionstopic"><u>Appointment.GetExceptions Method</u></a> to obtain exceptions of the specified appointment).</p><p><strong>See also:</strong><br />
-<a href="https://www.devexpress.com/Support/Center/p/E792">How to get XtraScheduler synchronized with XtraGrid</a><br />
-<a href="https://www.devexpress.com/Support/Center/p/E1249">How to obtain a particular appointment from the Appointments collection that meets the specified criteria</a></p>
-
-<br/>
-
-
