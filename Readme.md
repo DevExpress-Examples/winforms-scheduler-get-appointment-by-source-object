@@ -6,7 +6,7 @@
 
 # WinForms Scheduler - Obtain appointments by an object in the data source
 
-The [PersistentObject.GetSourceObject](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraScheduler.PersistentObject.GetSourceObject(DevExpress.XtraScheduler.ISchedulerStorageBase)) method allows you to obtain a source object that corresponds to a specific appointment. This example shows how to obtain an appoitnment by an object in the data source.
+The [PersistentObject.GetSourceObject](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraScheduler.PersistentObject.GetSourceObject(DevExpress.XtraScheduler.ISchedulerStorageBase)) method allows you to obtain a source object that corresponds to a specific appointment. This example shows how to obtain an appointment by an object in the data source.
 
 The example handles the [SchedulerStorageBase.AppointmentCollectionLoaded](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraScheduler.SchedulerStorageBase.AppointmentCollectionLoaded) event to create a Hashtable/Dictionary where source objects are keys and appointments are values.
 
